@@ -77,7 +77,7 @@ generate_ast:
 			java/com/craftinginterpreters/lox
 
 # Compile the Java interpreter .java files to .class files.
-jlox: generate_ast
+jlox: #generate_ast
 	@ $(MAKE) -f util/java.make DIR=java PACKAGE=lox
 
 run_generate_ast = @ java -cp build/gen/$(1) \
